@@ -1,24 +1,17 @@
 package masteringJava;
 
-public class Person {
-	String name;
-	int age;
-
-	void speak() {
-		System.out.println("My name is " + name);
-	}
-
-	int calculateYears2R() {
-		int yearsLeft = 65 - age;
-
-		return yearsLeft;
-	}
+public class Person implements Info{
+	private String name;
 	
-	int getAge(){
-		return age;
+	public Person(String name) {
+		this.name = name;
 	}
-	
-	String getName(){
-		return name;
+
+	public void greet(){
+		System.out.println("Hello There");
+	}
+
+	public void showInfo() {
+		System.out.println("Person name is: " + name);
 	}
 }
